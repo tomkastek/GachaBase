@@ -5,8 +5,14 @@ class CharactersPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: Text('CharactersPage'),
-    );
+    return GridView.builder(
+        gridDelegate:
+            SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 6),
+        itemBuilder: (context, index) {
+          return Card(
+            child: Text('i'),
+          );
+        },
+    itemCount: 80,);
   }
 }

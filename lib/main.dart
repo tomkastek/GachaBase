@@ -1,7 +1,7 @@
 import 'package:app/characters_page.dart';
 import 'package:app/guides_page.dart';
 import 'package:app/home_page.dart';
-import 'package:app/teambuildings_page.dart';
+import 'package:app/teambuilding_page.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -33,11 +33,10 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   int _selectedIndex = 0;
-  static const TextStyle optionStyle = TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
   static const List<Widget> _widgetOptions = <Widget>[
     HomePage(),
     CharactersPage(),
-    TeambuildingsPage(),
+    TeambuildingPage(),
     GuidesPage(),
   ];
 
@@ -69,15 +68,15 @@ class _MyHomePageState extends State<MyHomePage> {
         ),
         BottomNavigationBarItem(
           icon: Icon(Icons.person, color: Colors.black),
-          title: Text('Business'),
+          title: Text('Heroes'),
         ),
         BottomNavigationBarItem(
           icon: Icon(Icons.group, color: Colors.black),
-          title: Text('School'),
+          title: Text('Teams'),
         ),
         BottomNavigationBarItem(
           icon: Icon(Icons.help, color: Colors.black),
-          title: Text('School'),
+          title: Text('Tips'),
         ),
       ],
       currentIndex: _selectedIndex,
