@@ -1,3 +1,4 @@
+import 'package:app/model/hero_database.dart';
 import 'package:flutter/material.dart';
 
 class CharactersPage extends StatelessWidget {
@@ -5,14 +6,16 @@ class CharactersPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var characters = CharacterDatabase();
+
     return GridView.builder(
         gridDelegate:
-            SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 6),
+            SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 5),
         itemBuilder: (context, index) {
           return Card(
             child: Text('i'),
           );
         },
-    itemCount: 80,);
+    itemCount: characters.characterCount,);
   }
 }
